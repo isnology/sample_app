@@ -200,7 +200,6 @@
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.5.0, RVM: ruby-1.9.3-p547) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spork (v0.9.0, RVM: ruby-1.9.3-p547) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.2.2, RVM: ruby-1.9.3-p547) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.5, RVM: ruby-1.9.3-p547) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-1.9.3-p547) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-1.9.3-p547) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timers (v1.1.0, RVM: ruby-1.9.3-p547) [gem]" level="application" />
