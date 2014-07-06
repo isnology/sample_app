@@ -3,10 +3,6 @@ require 'spec_helper'
 describe "Static Pages" do
 
   let(:base_title) {"Ruby on Rails Tutorial Sample App"}
-  let(:sp) {'/static_pages/'}
-  let(:root_path) {sp+'home'}
-  let(:about_path) {sp+'about'}
-  let(:contact_path) {sp+'contact'}
 
   describe "Home page" do
     it "should have the h1 'Sample App'" do
