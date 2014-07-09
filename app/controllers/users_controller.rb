@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      # a successful save has occured.
+      render 'show'
     else
       render 'new'
     end
