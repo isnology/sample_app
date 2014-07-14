@@ -1,21 +1,25 @@
 require 'spec_helper'
 
-describe "AuthenticationPages" do
-  describe "GET /authentication_pages" do
-    subject { page }
+describe "Authentication" do
 
-    describe "signin page" do
-      before { visit signin_path }
-
-      it { should have_selector('h1',    text: 'Sign in') }
-      it { should have_selector('title', text: 'Sign in') }
-    end
-  end
+  subject { page }
 
   describe "signin" do
     before { visit signin_path }
+
+    it { should have_selector('h1',    text: 'Sign in') }
+    it { should have_selector('title', text: 'Sign in') }
+
     describe "with invalid information" do
+      before { click_button "Sign in" }
+
       it { should have_selector('div.alert.alert-error', text: 'Invalid') }
+
+      describe "after visit another page" do
+        before { click_link "Home" }
+
+        it { should_not have_selector('div.alert.alert-error') }
+      end
     end
 
     describe "with valid information" do
@@ -25,6 +29,7 @@ describe "AuthenticationPages" do
         fill_in "Password", with: user.password
         click_button "Sign in"
       end
+
       it { should have_selector('title', text: user.name) }
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
