@@ -23,7 +23,7 @@ describe RelationshipsController do
 
     it "should decrement the Relationship count" do
       expect do
-        xhr :delete, :destory, id: relationship.id
+        xhr :delete, :destroy, id: relationship.id
       end.should change(Relationship, :count).by(-1)
     end
 
