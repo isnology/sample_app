@@ -4,7 +4,7 @@ describe RelationshipsController do
   let(:other_user) { FactoryGirl.create(:user) }
   before { sign_in user }
 
-  desribe "creating a relationship with Ajax" do
+  describe "creating a relationship with Ajax" do
     it "should increment the Relationship count" do
       expoect do
         xhr :post, :create, relationship: { followed_id: other_user.id }
