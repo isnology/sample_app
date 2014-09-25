@@ -6,7 +6,7 @@ describe RelationshipsController do
 
   describe "creating a relationship with Ajax" do
     it "should increment the Relationship count" do
-      expoect do
+      expect do
         xhr :post, :create, relationship: { followed_id: other_user.id }
       end.should change(Relationship, :count).by(1)
     end
