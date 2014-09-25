@@ -18,7 +18,7 @@ describe RelationshipsController do
   end
 
   describe "destroying a relationship with Ajax" do
-    before { usre.follow!(other_user) }
+    before { user.follow!(other_user) }
     let(:relationship) { user.relationships.find_by_followed_id(other_user) }
 
     it "should decrement the Relationship count" do
